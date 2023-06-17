@@ -1,10 +1,17 @@
-Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
+# Project 3: Deploying ML Model for Cloud Application with FastAPI
+In this project, we will develop a classification model on publicly available `Census Bureau` data, by doing the following:
+- Create unit tests to monitor the model performance on various data slices. 
+- Deploy your model using the FastAPI package and create API tests. 
+- Incorporate the slice validation and the API tests into a CI/CD framework using GitHub Actions.
+
+* Note:
+    - Two datasets was provided in the starter code to experience updating the dataset and model in `git`.
+    - Working in a command line environment is recommended for ease of use with `git` and `dvc`. If on Windows, `WSL1` or `2` is recommended.
 
 # Environment Set up
-* Download and install conda if you don’t have it already.
-    * Use the supplied requirements file to create a new environment, or
-    * conda create -n [envname] "python=3.8" scikit-learn pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge
-    * Install git either through conda (“conda install git”) or through your CLI, e.g. sudo apt-get git.
+* Download and install conda
+    * Run ```conda create -n [envname] "python=3.8" scikit-learn pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge```
+    * Install `git` either through conda ```conda install git``` or (through  CLI, e.g. ```sudo apt-get git```)
 
 ## Repositories
 * Create a directory for the project and initialize git.
