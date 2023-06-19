@@ -1,29 +1,24 @@
 # Project 3: Deploying ML Model for Cloud Application with FastAPI
 In this project, we will develop a classification model on publicly available `Census Bureau` data, by doing the following:
-- Create unit tests to monitor the model performance on various data slices. 
-- Deploy your model using the FastAPI package and create API tests. 
-- Incorporate the slice validation and the API tests into a CI/CD framework using GitHub Actions.
+1. Create unit tests to monitor the model performance on various data slices. 
+2. Deploy your model using the FastAPI package and create API tests. 
+3. Incorporate the slice validation and the API tests into a CI/CD framework using GitHub Actions.
 
 * Note:
     - Two datasets was provided in the starter code to experience updating the dataset and model in `git`.
     - Working in a command line environment is recommended for ease of use with `git` and `dvc`. If on Windows, `WSL1` or `2` is recommended.
 
-# Environment Set up
+# Environment & Repositories Set up
 * Download and install conda
-    * Run ```conda create -n [envname] "python=3.8" scikit-learn pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge```
-    * Install `git` either through conda ```conda install git``` or (through  CLI, e.g. ```sudo apt-get git```)
-
-## Repositories
-* Create a directory for the project and initialize git.
-    * As you work on the code, continually commit changes. Trained models you want to use in production must be committed to GitHub.
-* Connect your local git repo to GitHub.
-* Setup GitHub Actions on your repo. You can use one of the pre-made GitHub Actions if at a minimum it runs pytest and flake8 on push and requires both to pass without error.
-    * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
+* Run ```conda create -n [envname] "python=3.8" scikit-learn pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge```
+* Install `git` either through conda ```conda install git``` or (through  CLI, e.g. ```sudo apt-get git```)
+* Create a directory for the project and initialize git
+* Connect your local git repo to GitHub, continually commit changes
+* Setup GitHub Actions on your repo (GitHub pre-made Actions could be used if, at a minimum,runs `pytest` and `flake8` on push and requires both to pass without error.
 
 # Data
-* Download census.csv and commit it to dvc.
-* This data is messy, try to open it in pandas and see what you get.
-* To clean it, use your favorite text editor to remove all spaces.
+* Download `census.csv` and commit it to `dvc`.
+* The data is messy, to clean it, remove all spaces.
 
 # Model
 * Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.
