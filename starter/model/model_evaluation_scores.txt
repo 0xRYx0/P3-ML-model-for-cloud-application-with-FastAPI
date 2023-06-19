@@ -1,0 +1,2 @@
+Train metrics:	 Precision=[0.6817]  Recall=[0.9382]  F1 score=[0.7896]
+Test metrics:	 Precision=[0.6210]  Recall=[0.8359]  F1 score=[0.7126]

@@ -1,0 +1,17 @@
+06/19/23 07:39:05 PM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+06/19/23 07:39:05 PM root INFO - Features (X): (32537, 14)
+06/19/23 07:39:05 PM root INFO - Labels (y): (32537,)
+06/19/23 09:48:32 PM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+06/19/23 09:48:32 PM root INFO - Features (X): (32537, 14)
+06/19/23 09:48:32 PM root INFO - Labels (y): (32537,)
+06/19/23 09:48:32 PM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+06/19/23 09:48:32 PM root INFO - X_train data shape: (22775, 14)
+06/19/23 09:48:32 PM root INFO - y_train data shape: (22775,)
+06/19/23 09:48:32 PM root INFO - X_test data shape: (9762, 14)
+06/19/23 09:48:32 PM root INFO - y_test data shape: (9762,)
+06/19/23 09:48:32 PM root INFO - SUCCESS: Creating Random Forest model
+06/19/23 09:54:17 PM root INFO - SUCCESS: Training and optimising Random Forest model using Grid-search approach
+06/19/23 09:54:17 PM root INFO - SUCCESS: Validating model performance uing train data
+06/19/23 09:54:18 PM root INFO - SUCCESS: Validating model performance uing test data
+06/19/23 09:54:18 PM root INFO - SUCCESS: Validating model performance uing train data
+06/19/23 09:54:19 PM root INFO - SUCCESS: Validating model performance uing test data
