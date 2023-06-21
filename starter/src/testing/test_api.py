@@ -1,13 +1,16 @@
 import pytest
+import joblib
+import os
 from http import HTTPStatus
 from fastapi.testclient import TestClient
 
-from app.api import app
+from api import app
 
 
 # Initialize the test client
 client = TestClient(app)
 
+# model = joblib.load(os.path.join(os.getcwd(), "..","..", "model", "model.pkl"))
 
 def test_greetings():
     """
@@ -64,7 +67,7 @@ def test_predict_status():
         'capital_loss': 0,
         'hours_per_week': 5
     }
-    response = client.post("/predict/", json=data)
+    response = client.post("/prediction/", json=data)
     assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Prediction" 
     assert response.request.method == "POST" , "Request method is not POST)"
     assert response.json()['Prediction'] == 0 or response.json()['Prediction'] == 1 , "Inaccurate labels for prediction"  
@@ -84,7 +87,7 @@ def test_missing_feature_predict():
     data = {
         "age": 0
     }
-    response = client.post("/predict/", json=data)
+    response = client.post("/prediction/", json=data)
     assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY, "Unreachable endpoint: Prediction" 
     assert response.request.method == "POST", "Request method is not POST"
     assert response.json()["detail"][0]["type"] == "value_error.missing", "Error: unknow issue"
