@@ -36,9 +36,9 @@ jobs:
     # - name: DVC pull
     #   run: |
     #     dvc pull 
-    - name: Test with pytest # Final action which runs pytest. If any test fails, then this Action fails
-      run: |
-        pytest starter/src/pipeline -vv
+    # - name: Test with pytest # Final action which runs pytest. If any test fails, then this Action fails
+    #   run: |
+    #     pytest starter/src/pipeline -vv
 
     - name: Test with pytest # Final action which runs pytest. If any test fails, then this Action fails
       run: |
