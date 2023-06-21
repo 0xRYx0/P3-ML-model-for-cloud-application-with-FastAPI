@@ -1,10 +1,8 @@
 import pytest
-import joblib
-import os
 from http import HTTPStatus
 from fastapi.testclient import TestClient
 
-from api import app
+from pipeline.api import app
 
 
 # Initialize the test client
