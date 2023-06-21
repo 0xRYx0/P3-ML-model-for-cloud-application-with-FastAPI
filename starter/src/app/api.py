@@ -44,10 +44,7 @@ class InputData(BaseModel):
     native_country: str = None
 
 # Loading required model
-@app.on_event("startup")
-async def load_model_and_config():
-    global model
-    model = joblib.load(os.path.join(os.getcwd(), "..","..", "model", "model.pkl"))
+model = joblib.load(os.path.join(os.getcwd(), "..","..", "model", "model.pkl"))
 
 
 # GET endpoint for root

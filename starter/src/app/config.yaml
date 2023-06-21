@@ -1,4 +1,3 @@
-
 features_details:
   age: "The age of the person in years. It is represented as a numerical value. (Numerical - Integer)"
   workclass: "The type of workclass the person belongs to, such as Private, Self-emp-not-inc, Self-emp-inc, etc. It is represented as a categorical variable. (Categorical - String)"
