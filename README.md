@@ -17,8 +17,9 @@ In this project, we will develop a classification model on publicly available `C
 * Setup GitHub Actions on your repo (GitHub pre-made Actions could be used if, at a minimum,runs `pytest` and `flake8` on push and requires both to pass without error.
 
 # Data
-* Download `census.csv` and commit it to `dvc`.
+* Download `census.csv` and commit it to `dvc`.  [more [info](https://archive.ics.uci.edu/dataset/20/census+income) about the data]
 * The data is messy, to clean it, remove all spaces.
+
 
 # Model
 * Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.

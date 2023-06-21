@@ -14,7 +14,7 @@ The model was trained on the Census Income Dataset from the UCI Machine Learning
 
 ## Evaluation Data
 
-The evaluation data was obtained by splitting the training data using `train_test_split` from the `sklearn` library. The split was stratified based on the salary label, with a fixed random_state=42.
+The evaluation data was obtained by splitting the training data using `train_test_split` from the `sklearn` library into `Training dataset [70%]` and `Testing dataset [30%]` . The split was stratified based on the salary label, with a fixed random_state=42.
 
 ## Metrics
 

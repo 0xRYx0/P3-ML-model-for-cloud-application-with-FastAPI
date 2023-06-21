@@ -687,3 +687,16 @@
 06/20/23 12:44:26 AM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
 06/20/23 12:44:26 AM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
 06/20/23 12:44:26 AM root INFO - SUCCESS: Prepared Training data and labels
+06/20/23 06:01:35 AM root INFO - SUCCESS: Creating model pipeline utlizing provided model & features
+06/20/23 06:01:38 AM root INFO - SUCCESS: Removed duplicates values
+06/20/23 06:01:38 AM root INFO - SUCCESS: Removed all white spaces in each row of categorical columns
+06/20/23 06:01:38 AM root INFO - SUCCESS: Replaced all white spaces in column names
+06/20/23 06:01:38 AM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
+06/20/23 06:01:38 AM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
+06/20/23 06:01:38 AM root INFO - SUCCESS: Prepared Training data and labels
+06/20/23 06:01:40 AM root INFO - SUCCESS: Removed duplicates values
+06/20/23 06:01:40 AM root INFO - SUCCESS: Removed all white spaces in each row of categorical columns
+06/20/23 06:01:40 AM root INFO - SUCCESS: Replaced all white spaces in column names
+06/20/23 06:01:40 AM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
+06/20/23 06:01:40 AM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
+06/20/23 06:01:40 AM root INFO - SUCCESS: Prepared Training data and labels
