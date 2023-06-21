@@ -23,19 +23,19 @@ jobs:
     - name: Lint with flake8
       run: |
         flake8 . --count --show-source --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: AKIAQZLQB33GPPBDRVES
-        aws-secret-access-key: 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
-        aws-region: eu-north-1
-        role-duration-seconds: 500
-        role-session-name: Github_Action
-    - name: DVC install
-      uses: iterative/setup-dvc@v1
-    - name: DVC pull
-      run: |
-        dvc pull 
+    # - name: Configure AWS Credentials
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     aws-access-key-id: AKIAQZLQB33GPPBDRVES
+    #     aws-secret-access-key: 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
+    #     aws-region: eu-north-1
+    #     role-duration-seconds: 500
+    #     role-session-name: Github_Action
+    # - name: DVC install
+    #   uses: iterative/setup-dvc@v1
+    # - name: DVC pull
+    #   run: |
+    #     dvc pull 
     - name: Test with pytest # Final action which runs pytest. If any test fails, then this Action fails
       run: |
         pytest src/testing -vv
