@@ -2,7 +2,7 @@ import pytest
 from http import HTTPStatus
 from fastapi.testclient import TestClient
 
-from pipeline.api import app
+from api import app
 
 
 # Initialize the test client
