@@ -6,7 +6,7 @@ requests
 fastapi==0.63.0
 uvicorn
 gunicorn
-yaml
+PyYAML
 joblib
 os
 logging 
