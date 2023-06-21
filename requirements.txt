@@ -8,5 +8,3 @@ uvicorn
 gunicorn
 PyYAML
 joblib
-os
-logging 
