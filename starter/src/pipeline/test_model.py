@@ -12,8 +12,8 @@ import logging
 import os
 import pandas as pd
 
-from pipeline.data import clean_data
-from pipeline.model import create_pipeline
+from data import clean_data
+from model import create_pipeline
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
