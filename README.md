@@ -95,7 +95,7 @@ The third project [ML DevOps Engineer Nanodegree](https://www.udacity.com/course
     ![test_model](starter/screenshots/APIs%20Sanity%20Check.png "Testing Model")
 
 
-5. Before sarting CI/CD process, let have a look on tracked DVC components:
+5. Before starting CI/CD process, let's have a look at tracked DVC components:
     from CLI:
     ```
     dvc dag
@@ -113,7 +113,7 @@ The third project [ML DevOps Engineer Nanodegree](https://www.udacity.com/course
     ```
     ![ci_push](starter/screenshots/continuous_integration.png "Github Actions")
 
-7. Activating Continuous Developemnt (CD) using Render Paatform:
+7. Activating Continuous Development (CD) using Render Platform:
 
     * Deploying APIs:
     ![cd_render](starter/screenshots/API%20Live%20Test%20-%201.%20Render%20Deployment.png "Render Platform")
@@ -126,6 +126,9 @@ The third project [ML DevOps Engineer Nanodegree](https://www.udacity.com/course
     * APIs Live testing using a script:
     ![cd_render](starter/screenshots/API%20Live%20Test%20-%202.%20Render%20script%20.png "Render Platform")
 
+
+### Live testing 
+[Render: ml-model-fastapi](https://ml-model-fastapi.onrender.com/docs)
 
 ### License
 
