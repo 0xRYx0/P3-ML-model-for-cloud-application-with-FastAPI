@@ -11,7 +11,6 @@ from fastapi import FastAPI, Body
 import joblib
 import os
 import yaml
-import sys
 import logging 
 import numpy as np
 import pandas as pd
@@ -19,15 +18,16 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-sys.path.append(os.getcwd()+'/starter')
-from directories import _API_APP_CONFIGURATION, _MODEL_CONFIGURATION
-
 # Create FastAPI instance
 app = FastAPI()
 
 # Loading configurations
-with open(_API_APP_CONFIGURATION) as fp:
+with open("config.yaml") as fp:
         config = yaml.safe_load(fp)
+        
+# Loading required model
+model = joblib.load("model.pkl")
+
         
 # Model input data schema
 class InputData(BaseModel):
@@ -46,8 +46,6 @@ class InputData(BaseModel):
     sex: str = None
     native_country: str = None
 
-# Loading required model
-model = joblib.load(_MODEL_CONFIGURATION)
 
 # GET endpoint for root
 @app.get("/")
@@ -60,6 +58,7 @@ async def index():
 async def feature_info(feature):
     info = config['features_details'][feature]
     return info
+
 
 # POST endpoint for model inference
 @app.post("/prediction")
