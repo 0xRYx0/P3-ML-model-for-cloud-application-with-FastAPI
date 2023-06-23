@@ -1,21 +1,25 @@
+''' 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Udacity :  Machine Learning DevOps Engineer (MLOps) Nano-degree
+  Project :  3 - Deploying a ML Model on Heroku with FastAPI
+  Step    :  API Calls Testing Script
+  Author  :  Rakan Yamani
+  Date    :  19 June 2023
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
+
 import pytest
 import os 
-
+import sys
 from http import HTTPStatus
+
 from fastapi.testclient import TestClient
 
-import sys
 sys.path.insert(1, os.getcwd()+'/../app')
-
-print(sys.path)
-
 from api import app
-
 
 # Initialize the test client
 client = TestClient(app)
-
-# model = joblib.load(os.path.join(os.getcwd(), "..","..", "model", "model.pkl"))
 
 def test_greetings():
     """

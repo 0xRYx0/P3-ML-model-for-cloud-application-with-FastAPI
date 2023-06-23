@@ -68,7 +68,7 @@ def test_data_shape_match():
     Tests if dataset shape are matched
     """
     
-    X,y = clean_data(os.getcwd()+'/../data/census.csv')
+    X,y = clean_data(os.getcwd()+'/../../data/census.csv')
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
     
     assert X_train.shape[0] == y_train.shape[0], "Shape mismatch between X_train and y_train"
