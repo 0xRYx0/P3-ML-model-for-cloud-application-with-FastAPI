@@ -25,6 +25,9 @@ app = FastAPI()
 with open("config.yaml") as fp:
         config = yaml.safe_load(fp)
         
+# Loading required model
+model = joblib.load("model.pkl")
+
         
 # Model input data schema
 class InputData(BaseModel):
@@ -42,9 +45,6 @@ class InputData(BaseModel):
     race: str = None
     sex: str = None
     native_country: str = None
-
-# Loading required model
-model = joblib.load("model.pkl")
 
 
 # GET endpoint for root

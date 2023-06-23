@@ -2,7 +2,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Udacity :  Machine Learning DevOps Engineer (MLOps) Nano-degree
   Project :  3 - Deploying a ML Model on Heroku with FastAPI
-  Step    :  Testing script
+  Step    :  Pipeline Testing script
   Author  :  Rakan Yamani
   Date    :  19 June 2023
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
