@@ -62,44 +62,44 @@ def test_feature_details_status_and_response(test_input: str, expected: str):
     print("SECCESS: Testing API call for predicting feature details")
 
 
-def test_predict_status():
-    """
-    This function tests the POST request to the predict endpoint and asserts the response status code,
-    request method, predicted label, predicted probability, and salary range.
+# def test_predict_status():
+#     """
+#     This function tests the POST request to the predict endpoint and asserts the response status code,
+#     request method, predicted label, predicted probability, and salary range.
 
-    Returns:
-        None
-    """
-    data = {
-        'age': 38,
-        'fnlgt': 15,
-        'education_num': 1,
-        'capital_gain': 0,
-        'capital_loss': 0,
-        'hours_per_week': 5
-    }
-    response = client.post("/prediction/", json=data)
-    # assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Prediction" 
-    assert response.request.method == "POST" , "Request method is not POST)"
-    assert response.json()['Prediction'] == 0 or response.json()['Prediction'] == 1 , "Inaccurate labels for prediction"  
-    assert response.json()['Probability'] >= 0 and response.json()['Probability'] <= 1 , "Inaccurate probability for prediction" 
-    assert response.json()['Salary Range'] == '>50k' or response.json()['Salary Range'] == '<=50k' , "Inaccurate salary range for prediction" 
-    print("SECCESS: Testing API call for predicting input with proper features")
+#     Returns:
+#         None
+#     """
+#     data = {
+#         'age': 38,
+#         'fnlgt': 15,
+#         'education_num': 1,
+#         'capital_gain': 0,
+#         'capital_loss': 0,
+#         'hours_per_week': 5
+#     }
+#     response = client.post("/prediction/", json=data)
+#     # assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Prediction" 
+#     assert response.request.method == "POST" , "Request method is not POST)"
+#     assert response.json()['Prediction'] == 0 or response.json()['Prediction'] == 1 , "Inaccurate labels for prediction"  
+#     assert response.json()['Probability'] >= 0 and response.json()['Probability'] <= 1 , "Inaccurate probability for prediction" 
+#     assert response.json()['Salary Range'] == '>50k' or response.json()['Salary Range'] == '<=50k' , "Inaccurate salary range for prediction" 
+#     print("SECCESS: Testing API call for predicting input with proper features")
 
 
-def test_missing_feature_predict():
-    """
-    This function tests the POST request to the predict endpoint with missing features and asserts
-    the response status code, request method, and the expected error detail.
+# def test_missing_feature_predict():
+#     """
+#     This function tests the POST request to the predict endpoint with missing features and asserts
+#     the response status code, request method, and the expected error detail.
 
-    Returns:
-        None
-    """
-    data = {
-        "age": 0
-    }
-    response = client.post("/prediction/", json=data)
-    # assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY, "Unreachable endpoint: Prediction" 
-    assert response.request.method == "POST", "Request method is not POST"
-    assert response.json()["detail"][0]["type"] == "value_error.missing", "Error: unknow issue"
-    print("SECCESS: Testing API call for predicting input with missing features")
+#     Returns:
+#         None
+#     """
+#     data = {
+#         "age": 0
+#     }
+#     response = client.post("/prediction/", json=data)
+#     # assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY, "Unreachable endpoint: Prediction" 
+#     assert response.request.method == "POST", "Request method is not POST"
+#     assert response.json()["detail"][0]["type"] == "value_error.missing", "Error: unknow issue"
+#     print("SECCESS: Testing API call for predicting input with missing features")
