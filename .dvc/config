@@ -1,4 +1,7 @@
 [core]
-    remote = myremote
+    remote = mlfastapi
+    autostage = true
 ['remote "myremote"']
     url = s3://ml-model-fastapi/AKIAQZLQB33GPPBDRVES
+['remote "mlfastapi"']
+    url = s3://ml-model-fastapi
