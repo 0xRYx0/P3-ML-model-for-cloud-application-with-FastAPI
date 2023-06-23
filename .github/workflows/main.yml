@@ -49,4 +49,4 @@ jobs:
     # Validating submitted pipeline and APIs
     - name: Test Pipeline & APIs with pytest    
       run: |
-        pytest starter/testing -vv --disable-warnings
+        pytest starter/src/testing -vv --disable-warnings
