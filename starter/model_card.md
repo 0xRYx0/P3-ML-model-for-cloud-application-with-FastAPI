@@ -22,7 +22,6 @@ The evaluation data was obtained by splitting the training data using `train_tes
 | X Shape  | (22775, 14) | (9762, 14)|
 | Y Shape | (22775,) | (9762,)|
 
-
 ## Metrics
 
 The model's performance was evaluated using `precision`, `recall`, and `F1` score. These metrics are suitable for imbalanced problems like this binary classification task. Precision represents the ratio of correct predictions to the total predictions, recall represents the ratio of correct predictions to the total number of correct items in the dataset, and F1 score is the harmonic mean between precision and recall, providing a balanced measure of both.
