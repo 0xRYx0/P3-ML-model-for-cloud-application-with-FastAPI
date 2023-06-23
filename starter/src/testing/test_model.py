@@ -10,14 +10,17 @@
 
 import logging
 import os
+import sys
 import pandas as pd
-
-from data import clean_data
-from model import create_pipeline
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
+
+sys.path.insert(1, os.getcwd()+'/../pipeline')
+from data import clean_data
+from model import create_pipeline
+
 
 
 logging.basicConfig(filename=os.getcwd()+'/../logging.log', filemode='a', level=logging.INFO,

@@ -12,11 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2 
-    - name: Set up Python ${{ matrix.python-version }} # Name of an action that sets up Python
-      uses: actions/setup-python@v2 # A pre-built GitHub Action that sets up a Python environment
+    - name: Set up Python ${{ matrix.python-version }} environment
+      uses: actions/setup-python@v2                       
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies 
+    - name: Install required dependencies 
       run: |
         python -m pip install --upgrade pip # Upgrade pip to the latest version
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi # If we have a requirements.txt, then install it
@@ -31,7 +31,7 @@ jobs:
         aws-region: eu-north-1
         role-duration-seconds: 500
         role-session-name: Github_Action
-    - name: DVC install
+    - name: DVC install packages
       uses: iterative/setup-dvc@v1
     - name: DVC pull
       run: |

@@ -1,6 +1,13 @@
 import pytest
+import os 
+
 from http import HTTPStatus
 from fastapi.testclient import TestClient
+
+import sys
+sys.path.insert(1, os.getcwd()+'/../app')
+
+print(sys.path)
 
 from api import app
 

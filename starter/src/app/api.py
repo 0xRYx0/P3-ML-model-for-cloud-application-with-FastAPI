@@ -25,7 +25,6 @@ app = FastAPI()
 with open("config.yaml") as fp:
         config = yaml.safe_load(fp)
         
-        
 # Model input data schema
 class InputData(BaseModel):
     age: int
@@ -44,7 +43,7 @@ class InputData(BaseModel):
     native_country: str = None
 
 # Loading required model
-model = joblib.load(os.path.join(os.getcwd(), "..","..", "model", "model.pkl"))
+model = joblib.load(os.path.join(os.getcwd()+ "/../../model/model.pkl"))
 
 
 # GET endpoint for root
