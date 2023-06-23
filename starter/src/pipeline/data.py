@@ -12,7 +12,7 @@ import pandas as pd
 import os
 import logging
 
-logging.basicConfig(filename=os.getcwd()+'/../logging.log', filemode='a', level=logging.INFO,
+logging.basicConfig(filename=os.getcwd()+'/../../logging.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s %(name)s %(levelname)s - %(message)s', datefmt="%m/%d/%y %I:%M:%S %p")
 
 

@@ -16,7 +16,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
-logging.basicConfig(filename=os.getcwd()+'/../logging.log', filemode='a', level=logging.INFO,
+logging.basicConfig(filename=os.getcwd()+'/../../logging.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s %(name)s %(levelname)s - %(message)s', datefmt="%m/%d/%y %I:%M:%S %p")
 
 def create_pipeline(model, categorical_columns, numeric_columns, drop_columns):

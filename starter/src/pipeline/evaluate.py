@@ -13,7 +13,7 @@ import pandas as pd
 from pipeline.model import inference
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 
-logging.basicConfig(filename=os.getcwd()+'/../logging.log', filemode='a', level=logging.INFO,
+logging.basicConfig(filename=os.getcwd()+'/../../logging.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s %(name)s %(levelname)s - %(message)s', datefmt="%m/%d/%y %I:%M:%S %p")
 
 def compute_model_metrics(y_train, y_preds):
