@@ -7,9 +7,6 @@
   Date    :  19 June 2023
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
-
-from model import create_pipeline
-from data import clean_data
 import logging
 import os
 import sys
@@ -19,10 +16,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
-sys.path.insert(1, os.getcwd()+'/../pipeline')
+sys.path.append(os.getcwd()+'/../..')
+from directories import _SOURCE_PIPELINE_DIRECTORY, _DATA_ORIGINAL_SET
+
+sys.path.append(_SOURCE_PIPELINE_DIRECTORY)
+from model import create_pipeline
+from data import clean_data
 
 
-logging.basicConfig(filename=os.getcwd()+'/../logging.log', filemode='a', level=logging.INFO,
+logging.basicConfig(filename=os.getcwd()+'/../../logging.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s %(name)s %(levelname)s - %(message)s', datefmt="%m/%d/%y %I:%M:%S %p")
 
 
@@ -70,7 +72,7 @@ def test_data_shape_match():
     Tests if dataset shape are matched
     """
 
-    X, y = clean_data(os.getcwd()+'/../../data/census.csv')
+    X, y = clean_data(_DATA_ORIGINAL_SET)
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.3, random_state=42, stratify=y)
 
@@ -116,8 +118,3 @@ def assert_dataset_requirements():
     for column, expected_dtype in required_columns.items():
         assert df[column].dtype == expected_dtype, f"Column '{column}' has incorrect data type: expected {expected_dtype} got {df[column].dtype}"
     print("SECCESS: Required column and data types were set")
-
-
-# test_model_pipeline_creation()
-# test_data_shape_match()
-# assert_dataset_requirements()

@@ -10,7 +10,6 @@
 
 import requests
 
-
 data = {
     "age": 45,
     "workclass": "State-gov",

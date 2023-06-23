@@ -12,10 +12,12 @@ import pytest
 import os 
 import sys
 from http import HTTPStatus
-
 from fastapi.testclient import TestClient
 
-sys.path.insert(1, os.getcwd()+'/../app')
+sys.path.append(os.getcwd()+'/../..')
+from directories import _SOURCE_API_DIRECTORY
+
+sys.path.insert(1, _SOURCE_API_DIRECTORY)
 from api import app
 
 # Initialize the test client

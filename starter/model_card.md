@@ -20,7 +20,7 @@ The evaluation data was obtained by splitting the training data using `train_tes
 |--------|-------|-------|
 | Percentage | 70% | 30% |
 | X Shape  | (22775, 14) | (9762, 14)|
-| Y Sahepe | (22775,) | (9762,)|
+| Y Shape | (22775,) | (9762,)|
 
 
 ## Metrics

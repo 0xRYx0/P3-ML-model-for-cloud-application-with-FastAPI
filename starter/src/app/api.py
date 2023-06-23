@@ -11,6 +11,7 @@ from fastapi import FastAPI, Body
 import joblib
 import os
 import yaml
+import sys
 import logging 
 import numpy as np
 import pandas as pd
@@ -18,11 +19,14 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+sys.path.append(os.getcwd()+'/../..')
+from directories import _API_APP_CONFIGURATION, _MODEL_CONFIGURATION
+
 # Create FastAPI instance
 app = FastAPI()
 
 # Loading configurations
-with open("config.yaml") as fp:
+with open(_API_APP_CONFIGURATION) as fp:
         config = yaml.safe_load(fp)
         
 # Model input data schema
@@ -43,7 +47,7 @@ class InputData(BaseModel):
     native_country: str = None
 
 # Loading required model
-model = joblib.load(os.path.join(os.getcwd()+ "/../../model/model.pkl"))
+model = joblib.load(_MODEL_CONFIGURATION)
 
 
 # GET endpoint for root
