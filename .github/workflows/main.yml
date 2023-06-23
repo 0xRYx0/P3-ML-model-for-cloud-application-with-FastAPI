@@ -36,6 +36,9 @@ jobs:
     - name: DVC pull
       run: |
         dvc pull 
-    - name: Test with pytest    
+    - name: Test APIs with pytest    
       run: |
-        pytest starter/src/testing -vv
+        pytest starter/src/app -vv
+    - name: Test Pipeline with pytest    
+      run: |
+        pytest starter/src/pipeline -vv
