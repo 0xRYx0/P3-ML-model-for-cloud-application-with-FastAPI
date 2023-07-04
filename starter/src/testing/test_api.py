@@ -35,7 +35,7 @@ def test_greetings():
     assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Greetings" 
     assert response.request.method == "GET" , "Request method is not GET" 
     assert response.json() == {"message": "Here we go! Welcome"}
-    print("SECCESS: Testing API call for greetigns endpoint")
+    print("SECCESS: Testing API call for test_greetings endpoint")
 
 
 @pytest.mark.parametrize('test_input, expected', [
@@ -59,7 +59,7 @@ def test_feature_details_status_and_response(test_input: str, expected: str):
     assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Greetings" 
     assert response.request.method == "GET" , "Request method is not GET" 
     assert response.json() == expected , f"Mismatched feature details for {test_input}"  
-    print("SECCESS: Testing API call for predicting feature details")
+    print("SECCESS: Testing API call for test_feature_details_status_and_response endpoint")
 
 
 def test_predict_status():
@@ -79,12 +79,12 @@ def test_predict_status():
         'hours_per_week': 5
     }
     response = client.post("/prediction/", json=data)
-    # assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Prediction" 
-    assert response.request.method == "POST" , "Request method is not POST)"
+    assert response.status_code == HTTPStatus.OK , "Unreachable endpoint: Prediction" 
+    assert response.request.method == "POST" , "Request method is not POST"
     assert response.json()['Prediction'] == 0 or response.json()['Prediction'] == 1 , "Inaccurate labels for prediction"  
     assert response.json()['Probability'] >= 0 and response.json()['Probability'] <= 1 , "Inaccurate probability for prediction" 
     assert response.json()['Salary Range'] == '>50k' or response.json()['Salary Range'] == '<=50k' , "Inaccurate salary range for prediction" 
-    print("SECCESS: Testing API call for predicting input with proper features")
+    print("SECCESS: Testing API call for test_predict_status endpoint")
 
 
 def test_missing_feature_predict():
@@ -99,7 +99,13 @@ def test_missing_feature_predict():
         "age": 0
     }
     response = client.post("/prediction/", json=data)
-    # assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY, "Unreachable endpoint: Prediction" 
+    assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY, "Unreachable endpoint: Prediction" 
     assert response.request.method == "POST", "Request method is not POST"
     assert response.json()["detail"][0]["type"] == "value_error.missing", "Error: unknow issue"
-    print("SECCESS: Testing API call for predicting input with missing features")
+    print("SECCESS: Testing API call for test_missing_feature_predict endpoint")
+
+
+test_greetings()
+test_feature_details_status_and_response(test_input='age',expected='The age of the person in years. It is represented as a numerical value. (Numerical - Integer)')
+test_predict_status()
+test_missing_feature_predict()
