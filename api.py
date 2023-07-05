@@ -64,10 +64,16 @@ async def feature_info(feature):
 @app.post("/prediction")
 async def inference(input_data: InputData = Body(...,examples=config['post_examples'])):
         
+    print('1.1 start function')    
     features = np.array([input_data.__dict__[f] for f in config['features_details']])
+    print('2.1 start features')  
     features = pd.DataFrame(features.reshape(1, -1), columns=config['features_details'])
+    print('3.1 Reshape features')  
     predicted_label = int(model.predict(features))
+    print('4.1 predicted_label')  
     prediction_probability = float(model.predict_proba(features)[:, 1])
+    print('5.1 prediction_probability')  
     pred = '>50k' if predicted_label == 1 else '<=50k'
+    print('6.1 prediction_probability') 
 
     return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
