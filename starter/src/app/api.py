@@ -46,9 +46,9 @@ class InputData(BaseModel):
     sex: str = None
     native_country: str = None
 
-# # Loading required model
-# print(_MODEL_CONFIGURATION)
-# model = joblib.load(_MODEL_CONFIGURATION)
+# Loading required model
+print('######### MODEL: '+_MODEL_CONFIGURATION)
+model = joblib.load(_MODEL_CONFIGURATION)
 
 
 # GET endpoint for root
@@ -64,19 +64,19 @@ async def feature_info(feature):
     return info
 
 
-# # POST endpoint for model inference
-# @app.post("/prediction/")
-# async def inference(input_data: InputData = Body(...,examples=config['post_examples'])):
-#     print('1. start function')    
-#     features = np.array([input_data.__dict__[f] for f in config['features_details']])
-#     print('2. start features')  
-#     features = pd.DataFrame(features.reshape(1, -1), columns=config['features_details'])
-#     print('3. Reshape features')  
-#     predicted_label = int(model.predict(features))
-#     print('4. predicted_label')  
-#     prediction_probability = float(model.predict_proba(features)[:, 1])
-#     print('5. prediction_probability')  
-#     pred = '>50k' if predicted_label == 1 else '<=50k'
-#     print('. prediction_probability') 
+# POST endpoint for model inference
+@app.post("/prediction/")
+async def inference(input_data: InputData = Body(...,examples=config['post_examples'])):
+    print('1. start function')    
+    features = np.array([input_data.__dict__[f] for f in config['features_details']])
+    print('2. start features')  
+    features = pd.DataFrame(features.reshape(1, -1), columns=config['features_details'])
+    print('3. Reshape features')  
+    predicted_label = int(model.predict(features))
+    print('4. predicted_label')  
+    prediction_probability = float(model.predict_proba(features)[:, 1])
+    print('5. prediction_probability')  
+    pred = '>50k' if predicted_label == 1 else '<=50k'
+    print('. prediction_probability') 
 
-#     return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
+    return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
