@@ -21,6 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip                                     # Upgrade pip to the latest version
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi    # Install requirements.txt if existed 
+        pip install -e .
 
     # Linting submitted code with flake8
     - name: Lint code with [flake8]
@@ -49,9 +50,9 @@ jobs:
     # Validating submitted pipeline and APIs
     - name: Test Pipeline & APIs with pytest    
       run: |
-        pytest starter/src/testing/test_model.py -vv --disable-warnings
+        python -m pytest starter/src/testing/test_model.py -vv --disable-warnings --import-mode=append
 
     # Validating submitted pipeline and APIs
     - name: Test Pipeline & APIs with pytest    
       run: |
-        pytest starter/src/testing/test_api.py -vv --disable-warnings
+        python -m pytest starter/src/testing/test_api.py -vv --disable-warnings --import-mode=append
