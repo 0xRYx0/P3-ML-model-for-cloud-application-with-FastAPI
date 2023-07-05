@@ -47,6 +47,7 @@ class InputData(BaseModel):
     native_country: str = None
 
 # Loading required model
+print(_MODEL_CONFIGURATION)
 model = joblib.load(_MODEL_CONFIGURATION)
 
 
