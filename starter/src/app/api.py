@@ -65,7 +65,7 @@ async def feature_info(feature):
 
 
 # POST endpoint for model inference
-@app.post("/prediction")
+@app.post("/prediction/")
 async def inference(input_data: InputData = Body(...,examples=config['post_examples'])):
         
     features = np.array([input_data.__dict__[f] for f in config['features_details']])
