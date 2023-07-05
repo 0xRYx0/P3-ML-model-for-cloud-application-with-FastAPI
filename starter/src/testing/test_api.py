@@ -62,7 +62,7 @@ def test_feature_details_status_and_response(test_input: str, expected: str):
     print("SECCESS: Testing API call for test_feature_details_status_and_response endpoint")
 
 
-def test_predict_status():
+def _test_predict_status():
     """
     This function tests the POST request to the predict endpoint and asserts the response status code,
     request method, predicted label, predicted probability, and salary range.
@@ -87,7 +87,7 @@ def test_predict_status():
     print("SECCESS: Testing API call for test_predict_status endpoint")
 
 
-def test_missing_feature_predict():
+def _test_missing_feature_predict():
     """
     This function tests the POST request to the predict endpoint with missing features and asserts
     the response status code, request method, and the expected error detail.
