@@ -48,8 +48,8 @@ class InputData(BaseModel):
 
 # Loading required model
 print(_MODEL_CONFIGURATION)
-model = joblib.load(_MODEL_CONFIGURATION)
-
+# model = joblib.load(_MODEL_CONFIGURATION)
+model = []
 
 # GET endpoint for root
 @app.get("/")
@@ -77,6 +77,6 @@ async def inference(input_data: InputData = Body(...,examples=config['post_examp
     prediction_probability = float(model.predict_proba(features)[:, 1])
     print('5. prediction_probability')  
     pred = '>50k' if predicted_label == 1 else '<=50k'
-    print('6. 201') 
+    print('6. prediction_probability') 
 
     return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
