@@ -45,6 +45,82 @@ class InputData(BaseModel):
     race: str = None
     sex: str = None
     native_country: str = None
+    
+    class Config:
+        schema_extra = {
+            "examples": {
+                "class >50k [label 1]": {
+                    "summary": "An example of class >50k",
+                    "description": "A example that should predict a class of >50k",
+                    "value": {
+                        "age": 45,
+                        "workclass": "State-gov",
+                        "fnlgt": 448512,
+                        "education": "bachelors",
+                        "education_num": 14,
+                        "marital_status": "Divorced",
+                        "occupation": "prof-specialty",
+                        "relationship": "wife",
+                        "race": "Black",
+                        "sex": "female",
+                        "capital_gain": 0,
+                        "capital_loss": 0,
+                        "hours_per_week": 60,
+                        "native_country": "taiwan",
+                    },
+                },
+                "class <=50k [label 0]": {
+                    "summary": "An example of an individual with an income of <=50k",
+                    "description": "This example represents an individual with various characteristics that are used to predict their income level",
+                    "value": {
+                        "age": 37,
+                        "workclass": "Self-emp-inc",
+                        "fnlgt": 32165,
+                        "education": "masters",
+                        "education_num": 14,
+                        "marital_status": "Married",
+                        "occupation": "adm-clerical",
+                        "relationship": "Husband",
+                        "race": "Asian-Pac-Islander",
+                        "sex": "male",
+                        "capital_gain": 2174,
+                        "capital_loss": 0,
+                        "hours_per_week": 40,
+                        "native_country": "united-states",
+                    },
+                },
+                "error_sample": {
+                    "summary": "An example of a sample that will cause an error",
+                    "description": "This example represents a sample that will cause an error with the model due to missing age and fnlgt variables",
+                    "value": {
+                        "workclass": "local-gov",
+                        "education": "assoc-voc",
+                        "education_num": 11,
+                        "marital_status": "divorced",
+                        "occupation": "prof-specialty",
+                        "relationship": "unmarried",
+                        "race": "white",
+                        "sex": "female",
+                        "capital_gain": 0,
+                        "capital_loss": 0,
+                        "hours_per_week": 1,
+                        "native_country": "taiwan"
+                    },
+                },
+                "missing_sample": {
+                    "summary": "An example of a sample with missing values",
+                    "description": "This example showcases the model's ability to handle missing values for certain features",
+                    "value": {
+                        "age": 81,
+                        "fnlgt": 120478,
+                        "education_num": 11,
+                        "capital_gain": 0,
+                        "capital_loss": 0,
+                        "hours_per_week": 1
+                    },
+                },
+            }
+        }
 
 
 # GET endpoint for root
@@ -62,12 +138,12 @@ async def feature_info(feature):
 
 # POST endpoint for model inference
 @app.post("/prediction/")
-async def inference(input_data: InputData = Body(...,examples=configurations['fastapi_post_examples'])):
+async def inference(input_data: InputData = Body(...,examples=InputData.Config.schema_extra["examples"])):
         
     print('1.1 start function')    
-    features = np.array([input_data.__dict__[f] for f in config['features_details']])
+    features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
     print('2.1 start features')  
-    features = pd.DataFrame(features.reshape(1, -1), columns=config['features_details'])
+    features = pd.DataFrame(features.reshape(1, -1), columns=configurations['features_details'])
     print('3.1 Reshape features')  
     predicted_label = int(model.predict(features))
     print('4.1 predicted_label')  
