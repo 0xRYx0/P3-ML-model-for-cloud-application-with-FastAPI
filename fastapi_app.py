@@ -90,18 +90,33 @@ async def prediction(input_data: Annotated[
         Body(
             examples=[
                 {
-                    "name": "Foo",
-                    "description": "A very nice Item",
-                    "price": 35.4,
-                    "tax": 3.2,
+                    "age": 45,
+                    "workclass": "State-gov",
+                    "fnlgt": 448512,
+                    "education": "bachelors",
+                    "education_num": 14,
+                    "marital_status": "Divorced",
+                    "occupation": "prof-specialty",
+                    "relationship": "wife",
+                    "race": "Black",
+                    "sex": "female",
+                    "capital_gain": 0,
+                    "capital_loss": 0,
+                    "hours_per_week": 60,
+                    "native_country": "taiwan"
                 },
                 {
-                    "name": "Bar",
-                    "price": "35.4",
+                    "age": 45,
+                    "workclass": "State-gov",
+                    "fnlgt": 448512,
+                    "capital_loss": 0,
+                    "hours_per_week": 60,
+                    "native_country": "taiwan"
                 },
                 {
-                    "name": "Baz",
-                    "price": "thirty five point four",
+                    "age": 45,
+                    "workclass": "State-gov"
+                    
                 },
             ],
         ),
