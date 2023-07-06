@@ -87,7 +87,7 @@ async def feature_info(feature):
 @app.post("/prediction/")
 async def prediction(input_data: Annotated[
         InputData,
-        Body(
+        Body(...,
             examples=[
                 {
                     "age": 45,
