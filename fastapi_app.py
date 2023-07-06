@@ -62,7 +62,7 @@ async def feature_info(feature):
 
 
 # POST endpoint for model inference
-@app.post("/prediction/")
+@app.post("/prediction")
 async def inference(
     *,
     input_data: Annotated [
@@ -143,9 +143,9 @@ async def inference(
 )]):
         
     print('1.1 start function')    
-    features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
+    features = np.array([input_data.__dict__[f] for f in configurations['fastapi_features_details']])
     print('2.1 start features')  
-    features = pd.DataFrame(features.reshape(1, -1), columns=configurations['features_details'])
+    features = pd.DataFrame(features.reshape(1, -1), columns=configurations['fastapi_features_details'])
     print('3.1 Reshape features')  
     predicted_label = int(model.predict(features))
     print('4.1 predicted_label')  
