@@ -1,4 +1,4 @@
-features_details:
+fastapi_features_details:
   age: "The age of the person in years. It is represented as a numerical value. (Numerical - Integer)"
   workclass: "The type of workclass the person belongs to, such as Private, Self-emp-not-inc, Self-emp-inc, etc. It is represented as a categorical variable. (Categorical - String)"
   fnlgt: "The final weight assigned to each observation after data sampling. It is used to correct for the unequal representation of classes. It is represented as a numerical value. (Numerical - Integer)"
@@ -15,8 +15,8 @@ features_details:
   native_country: "The native country of the person, such as United-States, Mexico, Philippines, etc. It is represented as a categorical variable. (Nominal Categorical - String)"
 
 
-post_examples:
-  Class >50k (indicated with Label [1]):
+fastapi_post_examples:
+  class_>50k_label_1:
     summary: "An example of class >50k"
     description: "A example that should predict a class of >50k"
     value: 
@@ -35,7 +35,7 @@ post_examples:
       hours_per_week: 60
       native_country: "taiwan"
 
-  Class <=50k (indicated with Label [0]:
+  class_<=50k_label_0:
     summary: "An example of an individual with an income of <=50k."
     description: "This example represents an individual with various characteristics that are used to predict their income level."
     value: 
@@ -54,7 +54,7 @@ post_examples:
       hours_per_week: 40
       native_country: "united-states"
 
-  Missing sample: 
+  missing_sample: 
     summary: "An example of a sample with missing values"
     description: "This example showcases the model's ability to handle missing values for certain features"
     value: 
@@ -65,7 +65,7 @@ post_examples:
       capital_loss: 0
       hours_per_week: 1
 
-  Error sample:
+  error_sample:
     summary: "An example of a sample that will cause an error"
     description: "This example represents a sample that will cause an error with the model due to missing age and fnlgt variables."
     value:
