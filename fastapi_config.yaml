@@ -11,7 +11,7 @@ fastapi_features_details:
   sex: "The gender of the person, either Male or Female. It is represented as a categorical variable. (Nominal Categorical - String)"
   capital_gain: "The capital gain of the person from investments or property sales. It is represented as a numerical value. (Numerical - Integer)"
   capital_loss: "The capital loss of the person from investments or property sales. It is represented as a numerical value. (Numerical - Integer)"
-  hours_per_week: "The number of hours worked per wee`k by the person. It is represented as a numerical value. (Numerical - Integer)"
+  hours_per_week: "The number of hours worked per week by the person. It is represented as a numerical value. (Numerical - Integer)"
   native_country: "The native country of the person, such as United-States, Mexico, Philippines, etc. It is represented as a categorical variable. (Nominal Categorical - String)"
 
 
@@ -35,7 +35,7 @@ fastapi_post_examples:
       hours_per_week: 60
       native_country: "taiwan"
 
-      Annotated[InputData,Body(..., examples=configurations['fastapi_post_examples'])]
+      
 
   class_<=50k_label_0:
     summary: "An example of an individual with an income of <=50k."
