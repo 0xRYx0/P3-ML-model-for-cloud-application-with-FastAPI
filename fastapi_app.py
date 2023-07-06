@@ -17,6 +17,7 @@ import pandas as pd
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing_extensions import Annotated
 
 # Create FastAPI instance
 app = FastAPI()
@@ -138,7 +139,7 @@ async def feature_info(feature):
 
 # POST endpoint for model inference
 @app.post("/prediction/")
-async def inference(input_data: InputData = Body(None,examples=InputData.Config.schema_extra["examples"])):
+async def inference(input_data: Annotated [InputData,Body(None,examples=InputData.Config.schema_extra["examples"])]):
         
     print('1.1 start function')    
     features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
