@@ -47,6 +47,28 @@ class InputData(BaseModel):
     sex: str = None
     native_country: str = None
     
+    class Config:
+        schema_extra = {
+            "examples": [
+                {
+                    "age": 45,
+                    "workclass": "State-gov",
+                    "fnlgt": 448512,
+                    "education": "bachelors",
+                    "education_num": 14,
+                    "marital_status": "Divorced",
+                    "occupation": "prof-specialty",
+                    "relationship": "wife",
+                    "race": "Black",
+                    "sex": "female",
+                    "capital_gain": 0,
+                    "capital_loss": 0,
+                    "hours_per_week": 60,
+                    "native_country": "taiwan"
+                }
+            ]
+        }
+    
 
 # GET endpoint for root
 @app.get("/")
@@ -63,7 +85,7 @@ async def feature_info(feature):
 
 # POST endpoint for model inference
 @app.put("/prediction/")
-async def prediction(input_data: Annotated[InputData,Body(..., examples=configurations['fastapi_post_examples'])]):
+async def prediction(input_data: InputData):
         
     print('1.1 start function')    
     features = np.array([input_data.__dict__[f] for f in configurations['fastapi_features_details']])
