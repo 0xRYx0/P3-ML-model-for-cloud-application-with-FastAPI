@@ -63,7 +63,7 @@ async def feature_info(feature):
 
 # POST endpoint for model inference
 @app.post("/prediction/")
-async def prediction(input_data: InputData = Body(..., examples=configurations['fastapi_post_examples'])):
+async def prediction(input_data: Annotated[InputData,Body(..., examples=configurations['fastapi_post_examples'])]):
         
     print('1.1 start function')    
     features = np.array([input_data.__dict__[f] for f in configurations['fastapi_features_details']])
