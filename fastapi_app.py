@@ -67,7 +67,7 @@ async def inference(
     *,
     input_data: Annotated [
         InputData,
-        Body(
+        Body(None,
             example = [
                 {
                     "summary": "An example of class >50k",
