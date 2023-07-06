@@ -11,7 +11,6 @@ from fastapi import FastAPI, Body
 import joblib
 import os
 import yaml
-import sys
 import logging 
 import numpy as np
 import pandas as pd
@@ -19,15 +18,16 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-sys.path.append(os.getcwd()+'/starter')
-from directories import _API_APP_CONFIGURATION, _MODEL_CONFIGURATION
-
 # Create FastAPI instance
 app = FastAPI()
 
 # Loading configurations
-with open(_API_APP_CONFIGURATION) as fp:
-        config = yaml.safe_load(fp)
+with open("fastapi_config.yaml") as fp:
+        configurations = yaml.safe_load(fp)
+        
+# Loading required model
+model = joblib.load("fastapi_model.pkl")
+
         
 # Model input data schema
 class InputData(BaseModel):
@@ -46,8 +46,6 @@ class InputData(BaseModel):
     sex: str = None
     native_country: str = None
 
-# Loading required model
-model = joblib.load(_MODEL_CONFIGURATION)
 
 # GET endpoint for root
 @app.get("/")
@@ -58,17 +56,24 @@ async def index():
 # GET endpoint for features
 @app.get("/features_details/{feature}")
 async def feature_info(feature):
-    info = config['features_details'][feature]
+    info = configurations['fastapi_features_details'][feature]
     return info
 
+
 # POST endpoint for model inference
-@app.post("/prediction")
-async def inference(input_data: InputData = Body(...,examples=config['post_examples'])):
+@app.post("/prediction/")
+async def inference(input_data: InputData = Body(...,examples=configurations['fastapi_post_examples'])):
         
+    print('1.1 start function')    
     features = np.array([input_data.__dict__[f] for f in config['features_details']])
+    print('2.1 start features')  
     features = pd.DataFrame(features.reshape(1, -1), columns=config['features_details'])
+    print('3.1 Reshape features')  
     predicted_label = int(model.predict(features))
+    print('4.1 predicted_label')  
     prediction_probability = float(model.predict_proba(features)[:, 1])
+    print('5.1 prediction_probability')  
     pred = '>50k' if predicted_label == 1 else '<=50k'
+    print('6.1 prediction_probability') 
 
     return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
