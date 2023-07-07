@@ -82,7 +82,7 @@ async def inference(input_data: InputData = Body(...,examples=configurations['po
     
     data = input_data.dict()
     features = np.array([data[f] for f in configurations['features_details'].keys()]).reshape(1, -1)
-    df = pd.DataFrame(features, columns=configurations['features_info'].keys())
+    df = pd.DataFrame(features, columns=configurations['features_details'].keys())
     pred_label = int(model.predict(df))
     pred_probs = float(model.predict_proba(df)[:, 1])
     pred = '>50k' if pred_label == 1 else '<=50k'
