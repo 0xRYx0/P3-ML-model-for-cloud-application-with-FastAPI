@@ -25,9 +25,19 @@ from directories import _API_APP_CONFIGURATION, _MODEL_CONFIGURATION
 # Create FastAPI instance
 app = FastAPI()
 
+# # Loading configurations
+# with open(_API_APP_CONFIGURATION) as fp:
+#         config = yaml.safe_load(fp)
+
+# Loading required model
+# print('######### MODEL: '+_MODEL_CONFIGURATION)
+# model = joblib.load(_MODEL_CONFIGURATION)
+        
 # Loading configurations
-with open(_API_APP_CONFIGURATION) as fp:
-        config = yaml.safe_load(fp)
+with open("app_config.yaml") as fp:
+    config = yaml.safe_load(fp)
+    
+model = joblib.load("app_model.pkl")
         
 # Model input data schema
 class InputData(BaseModel):
@@ -45,10 +55,6 @@ class InputData(BaseModel):
     race: str = None
     sex: str = None
     native_country: str = None
-
-# Loading required model
-print('######### MODEL: '+_MODEL_CONFIGURATION)
-model = joblib.load(_MODEL_CONFIGURATION)
 
 
 # GET endpoint for root
