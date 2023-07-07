@@ -324,3 +324,157 @@
 07/07/23 02:27:40 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
 07/07/23 02:27:40 PM root INFO - SUCCESS: Validating sliced data performance uing test data
 07/07/23 02:27:40 PM root INFO - SUCCESS: Exporing model
+07/07/23 03:01:42 PM root INFO - SUCCESS: Removed duplicates values
+07/07/23 03:01:43 PM root INFO - SUCCESS: Removed all white spaces in each row of categorical columns
+07/07/23 03:01:43 PM root INFO - SUCCESS: Replaced all white spaces in column names
+07/07/23 03:01:43 PM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
+07/07/23 03:01:43 PM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
+07/07/23 03:01:43 PM root INFO - SUCCESS: Prepared Training data and labels
+07/07/23 03:01:43 PM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+07/07/23 03:01:43 PM root INFO - Features (X): (32537, 14)
+07/07/23 03:01:43 PM root INFO - Labels (y): (32537,)
+07/07/23 03:01:43 PM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+07/07/23 03:01:43 PM root INFO - X_train data shape: (22775, 14)
+07/07/23 03:01:43 PM root INFO - y_train data shape: (22775,)
+07/07/23 03:01:43 PM root INFO - X_test data shape: (9762, 14)
+07/07/23 03:01:43 PM root INFO - y_test data shape: (9762,)
+07/07/23 03:01:43 PM root INFO - SUCCESS: Creating Random Forest model
+07/07/23 03:01:43 PM root INFO - SUCCESS: Creating model pipeline utlizing provided model & features
+07/07/23 03:01:43 PM root INFO - SUCCESS: Creating model pipeline with associated prams and features
+07/07/23 03:01:43 PM root INFO - SUCCESS: Preparing a grid search for prameters optimzation
+07/07/23 03:08:04 PM root INFO - SUCCESS: Fitting the grid search with provided prams selections
+07/07/23 03:08:04 PM root INFO - SUCCESS: Optaining best model
+07/07/23 03:08:04 PM root INFO - SUCCESS: Training and optimising Random Forest model using Grid-search approach
+07/07/23 03:08:04 PM root INFO - SUCCESS: Predecting model data
+07/07/23 03:08:04 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:04 PM root INFO - Precision=[0.6816737288135594] Recall=[0.9382176052487698] F1=[0.7896311066799602]
+07/07/23 03:08:04 PM root INFO - SUCCESS: Validating model performance uing train data
+07/07/23 03:08:05 PM root INFO - SUCCESS: Predecting model data
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[0.6209728363866077] Recall=[0.8358843537414966] F1=[0.7125770206596593]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating model performance uing test data
+07/07/23 03:08:05 PM root INFO - SUCCESS: Predecting model data
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:05 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:05 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating sliced data performance uing train data
+07/07/23 03:08:06 PM root INFO - SUCCESS: Predecting model data
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating the trained  model using precision, recall, and F1
+07/07/23 03:08:06 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
+07/07/23 03:08:06 PM root INFO - SUCCESS: Validating sliced data performance uing test data
+07/07/23 03:08:07 PM root INFO - SUCCESS: Exporing model
