@@ -14,9 +14,8 @@ fastapi_features_details:
   hours_per_week: "The number of hours worked per week by the person. It is represented as a numerical value. (Numerical - Integer)"
   native_country: "The native country of the person, such as United-States, Mexico, Philippines, etc. It is represented as a categorical variable. (Nominal Categorical - String)"
 
-
 fastapi_post_examples:
-  class_>50k_label_1:
+  Class >50k (indicated with Label [1]):
     summary: "An example of class >50k"
     description: "A example that should predict a class of >50k"
     value: 
@@ -35,9 +34,7 @@ fastapi_post_examples:
       hours_per_week: 60
       native_country: "taiwan"
 
-      
-
-  class_<=50k_label_0:
+  Class <=50k (indicated with Label [0]:
     summary: "An example of an individual with an income of <=50k."
     description: "This example represents an individual with various characteristics that are used to predict their income level."
     value: 
@@ -56,7 +53,7 @@ fastapi_post_examples:
       hours_per_week: 40
       native_country: "united-states"
 
-  missing_sample: 
+  Missing sample: 
     summary: "An example of a sample with missing values"
     description: "This example showcases the model's ability to handle missing values for certain features"
     value: 
@@ -67,7 +64,7 @@ fastapi_post_examples:
       capital_loss: 0
       hours_per_week: 1
 
-  error_sample:
+  Error sample:
     summary: "An example of a sample that will cause an error"
     description: "This example represents a sample that will cause an error with the model due to missing age and fnlgt variables."
     value:
