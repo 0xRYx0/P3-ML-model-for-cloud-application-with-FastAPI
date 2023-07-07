@@ -67,8 +67,10 @@ async def feature_info(feature):
 async def inference(input_data: InputData = Body(...,examples=configurations['post_examples'])):
     print('1. start function')    
     features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
+    print(features)
     print('2. start features')  
     features = pd.DataFrame(features.reshape(1, -1), columns=configurations['features_details'])
+    print(features)
     print('3. Reshape features')  
     predicted_label = int(model.predict(features))
     print('4. predicted_label')  
