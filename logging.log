@@ -152,3 +152,21 @@
 07/05/23 11:48:21 PM root INFO - Precision=[1.0] Recall=[1.0] F1=[1.0]
 07/05/23 11:48:21 PM root INFO - SUCCESS: Validating sliced data performance uing test data
 07/05/23 11:48:21 PM root INFO - SUCCESS: Exporing model
+07/07/23 10:45:50 AM root INFO - SUCCESS: Removed duplicates values
+07/07/23 10:45:50 AM root INFO - SUCCESS: Removed all white spaces in each row of categorical columns
+07/07/23 10:45:50 AM root INFO - SUCCESS: Replaced all white spaces in column names
+07/07/23 10:45:50 AM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
+07/07/23 10:45:50 AM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
+07/07/23 10:45:50 AM root INFO - SUCCESS: Prepared Training data and labels
+07/07/23 10:45:50 AM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+07/07/23 10:45:50 AM root INFO - Features (X): (32537, 14)
+07/07/23 10:45:50 AM root INFO - Labels (y): (32537,)
+07/07/23 10:46:47 AM root INFO - SUCCESS: Removed duplicates values
+07/07/23 10:46:47 AM root INFO - SUCCESS: Removed all white spaces in each row of categorical columns
+07/07/23 10:46:47 AM root INFO - SUCCESS: Replaced all white spaces in column names
+07/07/23 10:46:47 AM root INFO - SUCCESS: Replaced hypone char (-) with underscor char (_) in column names
+07/07/23 10:46:47 AM root INFO - SUCCESS: Mapped salaries to either 1 for '>50K' or 0 for '<=50K'
+07/07/23 10:46:47 AM root INFO - SUCCESS: Prepared Training data and labels
+07/07/23 10:46:47 AM root INFO - SUCCESS: Preparing required features (X) and leabels (y)
+07/07/23 10:46:47 AM root INFO - Features (X): (32537, 14)
+07/07/23 10:46:47 AM root INFO - Labels (y): (32537,)
