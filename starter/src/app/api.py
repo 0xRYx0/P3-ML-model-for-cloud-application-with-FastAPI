@@ -62,19 +62,19 @@ async def feature_info(feature):
     return info
 
 
-# # POST endpoint for model inference
-# @app.post("/predictions/")
-# async def inference(input_data: InputData = Body(...,examples=configurations['post_examples'])):
-#     print('1. start function')    
-#     features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
-#     print('2. start features')  
-#     features = pd.DataFrame(features.reshape(1, -1), columns=configurations['features_details'])
-#     print('3. Reshape features')  
-#     predicted_label = int(model.predict(features))
-#     print('4. predicted_label')  
-#     prediction_probability = float(model.predict_proba(features)[:, 1])
-#     print('5. prediction_probability')  
-#     pred = '>50k' if predicted_label == 1 else '<=50k'
-#     print('. prediction_probability') 
+# POST endpoint for model inference
+@app.post("/predictions/")
+async def inference(input_data: InputData = Body(...,examples=configurations['post_examples'])):
+    print('1. start function')    
+    features = np.array([input_data.__dict__[f] for f in configurations['features_details']])
+    print('2. start features')  
+    features = pd.DataFrame(features.reshape(1, -1), columns=configurations['features_details'])
+    print('3. Reshape features')  
+    predicted_label = int(model.predict(features))
+    print('4. predicted_label')  
+    prediction_probability = float(model.predict_proba(features)[:, 1])
+    print('5. prediction_probability')  
+    pred = '>50k' if predicted_label == 1 else '<=50k'
+    print('. prediction_probability') 
 
-#     return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
+    return {'Prediction': predicted_label, 'Probability': prediction_probability, 'Salary Range': pred}
