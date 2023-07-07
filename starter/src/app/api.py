@@ -14,6 +14,7 @@ import sys
 import logging 
 import numpy as np
 import pandas as pd
+import sklearn
 
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
@@ -79,6 +80,7 @@ async def inference(input_data: InputData = Body(...,examples=configurations['po
     # pred = '>50k' if predicted_label == 1 else '<=50k'
     # print('. prediction_probability') 
     
+    print(sklearn.__version__)
     
     data = input_data.dict()
     features = np.array([data[f] for f in configurations['features_details'].keys()]).reshape(1, -1)
