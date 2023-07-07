@@ -24,23 +24,12 @@ from directories import _API_APP_CONFIGURATION, _MODEL_CONFIGURATION
 # Create FastAPI instance
 app = FastAPI()
 
-# # # Loading configurations
-# # with open(_API_APP_CONFIGURATION) as fp:
-# #         config = yaml.safe_load(fp)
-
-# #Loading required model
-# # print('######### MODEL: '+_MODEL_CONFIGURATION)
-# # model = joblib.load(_MODEL_CONFIGURATION)
-
-# config_path = os.getcwd()+'/starter/src/app/app_config.yaml'
-# model_path = 'app_model.pkl'    
-
 # Loading configurations
 with open(_API_APP_CONFIGURATION) as fp:
     configurations = yaml.safe_load(fp)
         
 # # Loading required model
-# model = joblib.load(_MODEL_CONFIGURATION)
+model = joblib.load(_MODEL_CONFIGURATION)
         
 # Model input data schema
 class InputData(BaseModel):
