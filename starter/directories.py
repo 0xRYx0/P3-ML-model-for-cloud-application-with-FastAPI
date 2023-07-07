@@ -13,7 +13,7 @@ _DATA_ORIGINAL_SET = os.path.join(_DATA_DIRECTORY, 'census.csv')
 _DATA_CLEANED_SET = os.path.join(_DATA_DIRECTORY, 'clean_census_data.csv')
 
 # Model sub-files: 
-_MODEL_CONFIGURATION = os.path.join(_MODEL_DIRECTORY, 'model.pkl')
+_MODEL_CONFIGURATION = os.path.join(_MODEL_DIRECTORY, 'new_model.pkl')
 
 # Source sub-directories & files
 # Application:
