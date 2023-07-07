@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest 
     strategy:
       matrix:
-        python-version: [3.9.13] 
+        python-version: [3.8] 
 
     steps:
     - uses: actions/checkout@v2 
@@ -47,11 +47,11 @@ jobs:
         dvc pull 
     
     # Validating submitted pipeline and APIs
-    - name: Test Pipeline & APIs with pytest    
+    - name: Test Pipeline with pytest    
       run: |
         python -m pytest starter/src/testing/test_model.py -vv --disable-warnings --import-mode=append
 
     # Validating submitted pipeline and APIs
-    - name: Test Pipeline & APIs with pytest    
+    - name: Test APIs with pytest    
       run: |
         python -m pytest starter/src/testing/test_api.py -vv --disable-warnings --import-mode=append
